@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.ico">--><!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<!--http://steamcommunity.com/id/ek-/inventory/json/730/2-->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Enhanced Steam Community Market</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="replaceSide"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+                <!--start settings-->
+                <div class="pageitem" id="settings">
+                    <h1 class="page-header">Settings</h1>
+
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <!-- Form Name --><!--<legend>Form Name</legend>--><!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="profileID">Profile ID</label>
+
+                                <div class="col-md-4">
+                                    <input id="profileID" name="profileID" type="text" placeholder="gaben"
+                                           class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="saveSettings">Save</label>
+
+                                <div class="col-md-4">
+                                    <a id="saveSettings" name="saveSettings" class="btn btn-primary">Save</a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!--end settings-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

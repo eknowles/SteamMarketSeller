@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSGO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.ico">-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+</head>
+<head></head>
+<body>
+<!--http://steamcommunity.com/id/ek-/inventory/json/730/2-->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Enhanced Steam Community Market</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="replaceSide"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+                <!--start csgo-->
+                <div class="pageitem" id="csgo">
+                    <h1 class="page-header"><img
+                            src="http://media.steampowered.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg"
+                            alt="" class="img-rounded"/> Counter-Strike: Global Offensive</h1>
+                    <button type="button" id="get-csgo" data-loading-text="Getting Data..." class="btn btn-primary">
+                        <i class="fa fa-refresh"></i> Load Inventory
+                    </button>
+                    <button type="button" id="get-prices" data-loading-text="Please wait..." class="btn btn-default">
+                        <i class="fa fa-sort-amount-desc"></i> Get Prices
+                    </button>
+                    <button type="button" id="get-csgo" data-loading-text="Getting Data..." class="btn btn-default">
+                        <i class="fa fa-gbp"></i> Sell
+                    </button>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#items" data-toggle="tab">Items</a></li>
+                        <li><a href="#crates" data-toggle="tab">Crates</a></li>
+                        <li><a href="#nonmarket" data-toggle="tab">Non Market</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="items">
+                            <!-- <h2 class="sub-header">Items</h2> -->
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Class ID</th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Rarity</th>
+                                        <th>Team</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="inventoryTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="crates">
+                            <!-- <h2 class="sub-header">Crates</h2> -->
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Class ID</th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Rarity</th>
+                                        <th>Team</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="inventoryTbody-containers"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nonmarket">
+                            <!-- <h2 class="sub-header">Non Market Items</h2> -->
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Class ID</th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Rarity</th>
+                                        <th>Team</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="inventoryTbody-nonmarket"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end csgo-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
