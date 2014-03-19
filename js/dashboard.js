@@ -37,7 +37,7 @@ function sellItem(appid, contextid, assetid, amount, price, steamsession) {
             console.log(data);
         });
 }
-function getPrices(appid) {
+function getPrices(appid, callback) {
     $('.itemRow').each(function () {
         var itemurl = "http://steamcommunity.com/market/listings/" + appid + "/" + $(this).find('.itemname').text();
         var xhr = new XMLHttpRequest();
@@ -63,6 +63,7 @@ function getPrices(appid) {
             }
         };
         xhr.send();
+        callback();
     });
 }
 function getInventory(appid, contextid, callback) {
@@ -95,7 +96,6 @@ function getInventory(appid, contextid, callback) {
                         "<td  class=\"itemname\" style=\"background-image: url('http://cdn.steamcommunity.com/economy/image/" + Item.icon_url + "/28fx42f');  border-left: 5px solid #" + Item.name_color + "\">" + Item.market_hash_name + "</td>" +
                         "<td class=\"itemtype\">" + Item.type + "</td>" +
                         "<td class=\"\" style=\"border-left: 5px solid #" + Item['tags'][1].color + "\">" + Item['tags'][1].name + "</td>" +
-                        "<td class=\"\">" + Item.type + "</td>" +
                         "<td class=\"price\"><a class=\"btn btn-default btn-xs\" data-lowest-price=\"250\" data-assetid=\"" + Item.classid + "\" >Sell Item</a></td>" +
                         "</tr>"
                     if (Item.type == 'Base Grade Container'){
